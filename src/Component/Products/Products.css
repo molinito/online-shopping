@@ -1,0 +1,14 @@
+.buttons {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .buttons button {
+    margin-bottom: 10px;
+  }
+
+@media (max-width: 768px) {
+    .buttons button {
+      font-size: 16px;
+    }
+  }
