@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Login.css';
 
+
+
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -17,6 +19,12 @@ const Login = () => {
     e.preventDefault();
     // Lógica para enviar los datos de inicio de sesión al servidor
   };
+
+  const showMessage = () => {
+    alert('Here goes the server connection');
+  };
+
+
 
   return (
     <form onSubmit={handleSubmit}>
@@ -39,10 +47,12 @@ const Login = () => {
           value={password}
           onChange={handlePasswordChange}
         />
-      </div>
-      <button type="submit" className="btn btn-primary">
+      </div >
+      <div className="form-group">
+      <button type="submit" className="btn btn-primary" onClick={showMessage}>
         Login
       </button>
+      </div>
     </form>
   );
 };

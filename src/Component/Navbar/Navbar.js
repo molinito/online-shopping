@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector} from "react-redux";
-import Login from './Component/Login/Login'; // Importar el componente Login
+// import Login from "../Login/Login";
 
 const Navbar = () => {
     const state = useSelector((state)=> state.handleCart)
@@ -32,9 +32,11 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="buttons ms-auto">
-        <Login /> // Agregar el componente Login
+        <NavLink to="/login" className="btn btn-outline-dark me-2">
+          <i className="fa fa-sign-in-me-1"/> Login
+        </NavLink>
         <NavLink to="/register" className="btn btn-outline-dark ms-2">
-          <i className="fa solid fa-sign-in me-1"/> Register
+          <i className="fa fa-sign-in-me-1"/> Register
         </NavLink>
         <NavLink to="/cart" className="btn btn-outline-dark ms-2">
           <i className="fa fa-sign-in-me-1" />Cart({state.length})

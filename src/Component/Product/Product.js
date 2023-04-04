@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import { useParams } from 'react-router';
+//import { useParams } from 'react-router';
 import { useDispatch} from "react-redux";
-import { addCart} from "../../redux/action/index.js";
+import { addCart} from "../../redux/actions/index.js";
 import { NavLink} from 'react-router-dom';
 import Skeleton from 'react-loading-skeleton';
 
@@ -9,7 +9,7 @@ import Skeleton from 'react-loading-skeleton';
 const Product = (props) => {
 
 
-    /* const {id} = useParams(); */
+    // const {id} = useParams(); 
     const [product, setProduct] = useState([]);
     const [loading, setLoading] = useState(false);
 
@@ -25,14 +25,14 @@ const Product = (props) => {
             const response = await fetch(`https://fakestoreapi.com/products/${props.location.id}`);
             setProduct( await response.json());
             setLoading(false);
-            console.log(loading);
 
         }
 
         getProduct();
         
+        
 
-    }, []);
+    }, [props.location.id]);
 
     const Loading = () => {
         return (
@@ -98,4 +98,5 @@ const Product = (props) => {
     )
 }
 
-export default Product;
+export default Product; 
+

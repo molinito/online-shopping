@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Footer.css";
 
 const Footer = () => {
 return (
@@ -17,22 +18,22 @@ return (
 <li>Email: info@example.com</li>
 </ul>
 </div>
-<div className="col-md-4">
+<div className="col-md-4" style={{fontSize:"20px"}}>
 <h5 className="mb-3">Follow us on social media</h5>
-<ul className="list-unstyled list-inline mb-0">
-<li className="list-inline-item">
+<ul className="list-inline mb-0" >
+<li className="list-inline-item" >
 <a href="https://facebook.com/" className="text-white">
 <i className="fab fa-facebook-f"></i>
 </a>
 </li>
-<li className="list-inline-item">
+<li className="list-inline-item" >
 <a href="https://twitter.com/" className="text-white">
 <i className="fab fa-twitter"></i>
 </a>
 </li>
-<li className="list-inline-item">
-<a href="https://instagram.com/" className="text-white">
-<i className="fab fa-instagram"></i>
+<li className="list-inline-item" >
+<a href="https://instagram.com/" className="text-white" >
+<i className="fab fa-instagram" ></i>
 </a>
 </li>
 <li className="list-inline-item">
@@ -40,6 +41,7 @@ return (
 <i className="fab fa-linkedin"></i>
 </a>
 </li>
+
 </ul>
 </div>
 </div>
