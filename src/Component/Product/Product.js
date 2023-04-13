@@ -25,6 +25,7 @@ const Product = (props) => {
             const response = await fetch(`https://fakestoreapi.com/products/${props.location.id}`);
             setProduct( await response.json());
             setLoading(false);
+            
 
         }
 
