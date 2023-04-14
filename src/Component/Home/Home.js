@@ -1,7 +1,6 @@
 import React from "react";
 import clothes from '../../../src/Image/shopping.jpg'
 import Products from "../Products/Products";
-import './Home.css'
 
 
 const Home =() => {
